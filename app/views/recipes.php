@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <title>Affichage des recettes</title>
-    <link rel="stylesheet" type="text/css" href="/public/css/sty.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/sty.css">
 </head>
 <body>
     <div class="recipes-container">

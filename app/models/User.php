@@ -7,25 +7,24 @@ class User {
         $this->db = $db;
     }
 
-    public function registerUser($nom, $MotdePasse, $email, $type, $sex) {
-        $query = "INSERT INTO utilisateur (nom, mot_de_passe, mail, type, sex) VALUES (?, ?, ?, ?, ?)";
+    // Enregistrement de l'utilisateur
+    public function register($nom, $motDePasse, $email, $type, $sexe) {
+        $query = "INSERT INTO utilisateurs (nom, mot_de_passe, email, type, sexe) VALUES (?, ?, ?, ?, ?)";
         $stmt = $this->db->prepare($query);
-        return $stmt->execute([$nom, $MotdePasse, $email, $type, $sex]);
+        $stmt->execute([$nom, $motDePasse, $email, $type, $sexe]);
     }
 
-    public function authenticate($nom, $motDePasse) {
-        // Rechercher l'utilisateur par nom
-        $query = "SELECT mot_de_passe FROM utilisateur WHERE nom = ?";
+    // Authentification de l'utilisateur
+    public function authenticate($username, $password) {
+        $query = "SELECT * FROM utilisateurs WHERE nom = ?";
         $stmt = $this->db->prepare($query);
-        $stmt->execute([$nom]);
+        $stmt->execute([$username]);
+        $user = $stmt->fetch();
 
-        if ($stmt->rowCount() > 0) {
-            $user = $stmt->fetch();
-            // Vérifier le mot de passe
-            return password_verify($motDePasse, $user['mot_de_passe']);
+        if ($user && password_verify($password, $user['mot_de_passe'])) {
+            return $user; // Retourner l'utilisateur s'il est trouvé
         }
         return false;
     }
 }
-?>
 

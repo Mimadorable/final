@@ -1,13 +1,19 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-$host = 'localhost';
-$db_name = 'projet';
-$username = 'root';
-$password = '';
+$user = "root";
+$mdp = "";
+$db = "projet";
+$server = "localhost";
 
-try {
-    $db = new PDO("mysql:host=$host;dbname=$db_name", $username, $password);
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch(PDOException $e) {
-    echo "Erreur : " . $e->getMessage();
+$link = mysqli_connect($server, $user, $mdp, $db);
+
+if ($link) {
+    echo "Connexion réussie";
+} else {
+    die("Erreur de connexion : " . mysqli_connect_error());
 }
+?>
+
+

@@ -102,7 +102,7 @@ header .navbar li a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(/public/images/healthy11.jpg);
+    background-image: url(../images/bbb.jpg);
     max-width: 100%;
     background-size: cover;
     background-position: center;
@@ -125,12 +125,12 @@ header .navbar li a:hover{
     max-width: 70%;
     text-align: center;
     margin-top: 25px;
-    margin-left: 350px;
+    margin-left: 380px;
    
 }
 .banniere .contenu h2{
     margin-top: 10px;
-   
+    margin-left: 220px;
     color: black;
     font-size: 2em;
     font-weight: 450;
@@ -141,11 +141,11 @@ header .navbar li a:hover{
     font-size: 1rem;
     font-family: Poppins;
     margin-top: 15px;
-    
+    margin-left: 230px;
 }
 
 .btn1{
-    margin-left: 100px;
+    margin-left: 200px;
     margin-top: 60px;
     border-radius: 25px;
     background-color: black;
@@ -162,7 +162,7 @@ header .navbar li a:hover{
    
 
 .btn2{
-    margin-left: 100px;
+    margin-left: 40px;
     margin-top: 60px;
     border-radius: 25px;
     background-color: black;
@@ -245,7 +245,34 @@ section{
     justify-content: center;
     border-radius: 3px;
     
-}
+    transition: transform 0.3s ease-in-out;
+}.slider-container {
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  .slider-left,
+  .slider-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    color: #000; /* Couleur des boutons */
+    font-size: 24px; /* Taille de la police */
+    cursor: pointer;
+    padding :10px;
+    z-index: 2;
+    border: 2px solid #000;
+  }
+  .slider-left {
+    left: 10px; /* Position du bouton gauche */
+  }
+  
+  .slider-right {
+    right: 10px; /* Position du bouton droit */
+  }
+
 .card{
     height: 35rem;
     position: relative;
@@ -278,7 +305,7 @@ section{
  
 
 .content{
-top:40%;
+top:50%;
 left: 0;
 padding: 25px;
 position: absolute;
@@ -320,7 +347,7 @@ font-size: 18px;
 }
 
 .temoignage{
-    background-image: url(./images/bg2.jpg);
+    background-image: url(../images/bg2.jpg);
     background-size: cover;
 }
 
@@ -386,10 +413,12 @@ font-size: 18px;
 .blanc .titre-texte,
 .blanc p{
     color: #fff;
+}.titre-texte span{
+    color: orange;
 }
 
 .contact{
-    background-image: url(./images/healthy10.jpg);
+    background-image: url(../images/healthy10.jpg);
     background-size: cover;
     box-shadow: 2px 2px 12px rgba(0,0,0, 0.8);
     width: 100%;
@@ -399,7 +428,7 @@ font-size: 18px;
 .contactform{
     padding: 75px 50px;
     background: #fff;
-    box-shadow: 5px 15px 50px rgba(0,0,0, 0.8);
+    box-shadow: 5px 15px 50px rgba(47, 139, 4, 0.8);
     max-width: 500px;
     margin-top: 50px;
     justify-content: center;
@@ -532,7 +561,7 @@ header .navbar.active{
     position: relative;
     width: 40px;
     height: 40px;
-    background-image: url(./images/menu.png);
+    background-image: url(../images/menu.png);
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
@@ -541,7 +570,7 @@ header .navbar.active{
 
 .menuToggle.active
 {
-    background-image: url(./images/close.png);
+    background-image: url(../images/close.png);
     background-size: 25px;
     background-repeat: no-repeat;
     background-origin: center;

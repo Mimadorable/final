@@ -1,6 +1,10 @@
 <?php
 
 require_once __DIR__ . '/../models/Recipe.php';
+require_once __DIR__ . '/../models/User.php';
+
+
+
 
 class RecipeController {
     private $recipeModel;
