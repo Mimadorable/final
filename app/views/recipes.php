@@ -23,8 +23,6 @@
     align-items: center;
     transition: 0.5s;
     margin-bottom: 20px;
-    /*background-color: #fff;
-    border-bottom: #fff;*/
     height: 70px;
 }
 
@@ -189,7 +187,7 @@ header .navbar li a:hover{
                 <div class="recipe">
                     <div class="card-box">
                         <div class="recipe-image">
-                            <img src="/public/images/<?= $recipe['image'] ?>" alt="Recipe Image">
+                            <img src="final/public/images/<?= $recipe['image'] ?>" alt="Recipe Image">
                         </div>
                     </div>
                     <div class="block">

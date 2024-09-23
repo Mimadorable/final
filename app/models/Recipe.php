@@ -20,9 +20,10 @@ class Recipe {
 
     // Nouvelle méthode pour obtenir les recettes selon la catégorie
     public function getRecipesByCategory($category) {
-        $query = "SELECT id_recette, nom_recette, etapes, portion, image 
-                  FROM recettes 
-                  WHERE categorie = ?";
+        $query = "SELECT r.id_recette, r.nom_recette, r.etapes, r.portion, r.image 
+              FROM recettes r
+              INNER JOIN categories c 
+              WHERE c.categorie = ?";
         $stmt = $this->db->prepare($query);
         $stmt->execute([$category]);
         return $stmt->fetchAll();
