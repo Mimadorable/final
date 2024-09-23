@@ -5,6 +5,8 @@ session_start();
 // Inclure la configuration et la connexion à la base de données
 require_once __DIR__ . '/../config/database.php'; // Vérifiez que ce chemin est correct
 
+
+
 // Déterminer le contrôleur et l'action
 $controller = isset($_GET['controller']) ? $_GET['controller'] : 'home';
 $action = isset($_GET['action']) ? $_GET['action'] : 'index';
@@ -28,7 +30,7 @@ switch ($controller) {
         break;
 
     case 'recipe':
-        require_once __DIR__ . '/../app/controllers/RecipeController.php'; // Correction du chemin
+        require_once 'controllers/RecipeController.php';
         $recipeController = new RecipeController($db);
 
         // Appeler la méthode appropriée en fonction des paramètres
@@ -36,15 +38,13 @@ switch ($controller) {
             $recipeController->showRecipesByType($type);
         } elseif ($categorie) {
             $recipeController->showRecipesByCategory($categorie);
-        } else {
-            echo "Veuillez sélectionner une catégorie ou un type pour afficher les recettes.";
         }
         break;
 
     default:
         // Page par défaut ou 404 si le contrôleur n'existe pas
-        header("HTTP/1.0 404 Not Found");
-        echo "La page demandée n'existe pas.";
+        echo "Page non trouvée.";
         break;
 }
+?>
 
