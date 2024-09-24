@@ -27,4 +27,15 @@ class Recipe {
         $stmt->execute([$category]);
         return $stmt->fetchAll();
     }
+
+
+
+
+
+
+
+
+
+
+    
 }
