@@ -5,9 +5,9 @@ require_once __DIR__ . '/../models/Recipe.php';
 class HomeController {
     private $recipeModel;
 
-    public function __construct($db) {
+    public function __construct($link) {
         // Instancier le modèle Recipe
-        $this->recipeModel = new Recipe($db);
+        $this->recipeModel = new Recipe($link);
     }
 
     // Afficher la page d'accueil

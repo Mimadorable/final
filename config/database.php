@@ -7,13 +7,12 @@ $mdp = "";
 $db = "projet";
 $server = "localhost";
 
-$link = mysqli_connect($server, $user, $mdp, $db);
+$link = new mysqli($server, $user, $mdp, $db);
 
-if ($link) {
-    echo "Connexion réussie";
+if ($link->connect_error) {
+    echo "erreur de connexion ";
 } else {
-    die("Erreur de connexion : " . mysqli_connect_error());
+   echo "connexion ok  : ";
 }
-?>
 
 

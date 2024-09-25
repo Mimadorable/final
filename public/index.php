@@ -17,7 +17,7 @@ $type = isset($_GET['type']) ? $_GET['type'] : null;
 switch ($controller) {
     case 'home':
         require_once __DIR__ . '/../app/controllers/HomeController.php';
-        $homeController = new HomeController($db);
+        $homeController = new HomeController($link);
 
         // Appeler la méthode appropriée en fonction des paramètres
         if ($categorie) {
@@ -31,7 +31,7 @@ switch ($controller) {
 
     case 'recipe':
         require_once 'controllers/RecipeController.php';
-        $recipeController = new RecipeController($db);
+        $recipeController = new RecipeController($link);
 
         // Appeler la méthode appropriée en fonction des paramètres
         if ($type) {

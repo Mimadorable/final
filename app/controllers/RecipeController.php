@@ -1,8 +1,7 @@
 <?php
 
 require_once __DIR__ . '/../models/Recipe.php';
-require_once __DIR__ . '/../models/User.php';
-
+require_once __DIR__ . '/../app/controllers/RecipeController.php';
 
 
 
