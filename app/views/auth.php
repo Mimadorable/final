@@ -12,7 +12,8 @@
     <header>
         <nav>
             <ul>
-                <li><a href="index.php">Home</a></li>
+            <li><a href="../public/index.php">Home</a></li>
+
                 <li><a href="index.php#contact">Contact</a></li>
             </ul>
             <div class="button-box">

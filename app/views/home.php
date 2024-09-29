@@ -106,7 +106,9 @@ function displayRecipes(recipes) {
         <h2>Que Des Plats Délicieux</h2>
         <p>Bienvenue sur notre site dédié aux recettes pour diabétiques ! Découvrez des délices culinaires spécialement conçus pour répondre à vos besoins nutritionnels. Savourez une cuisine équilibrée et délicieuse tout en prenant soin de votre santé. Rejoignez notre communauté gourmande et inspirante dès maintenant !</p>
         <a href="index.html#menu" class="btn1">Notre Menu</a>
-        <a href="formulaire.html" class="btn2">Selon le type de diabète</a>
+        <a href="index.php?controller=user&action=auth" class="btn2">Selon le type de diabète</a>
+
+
     </div>
 </section>
 

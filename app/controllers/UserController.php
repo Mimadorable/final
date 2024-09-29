@@ -5,12 +5,12 @@ require_once __DIR__ . '/../models/User.php'; // Inclure le modèle utilisateur
 class UserController {
     private $userModel;
 
-    public function __construct($db) {
-        $this->userModel = new User($db);
+    public function __construct($link) {
+        $this->userModel = new User($link);
     }
 
     // Affiche la page d'inscription/connexion
-    public function showAuthPage() {
+    public function showAuth() { // Renommé pour correspondre à l'action "auth"
         $this->loadView('auth');
     }
 

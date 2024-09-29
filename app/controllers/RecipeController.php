@@ -8,9 +8,9 @@ require_once __DIR__ . '/../app/controllers/RecipeController.php';
 class RecipeController {
     private $recipeModel;
 
-    public function __construct($db) {
+    public function __construct($link) {
         // Initialiser le modèle des recettes avec la connexion à la base de données
-        $this->recipeModel = new Recipe($db);
+        $this->recipeModel = new Recipe($link);
     }
 
     // Afficher les recettes selon le type de diabète

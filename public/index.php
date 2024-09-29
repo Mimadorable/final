@@ -18,7 +18,6 @@ switch ($controller) {
     case 'home':
         require_once __DIR__ . '/../app/controllers/HomeController.php';
         $homeController = new HomeController($link);
-
         // Appeler la méthode appropriée en fonction des paramètres
         if ($categorie) {
             $homeController->showRecipesByCategory($categorie);
@@ -32,7 +31,6 @@ switch ($controller) {
     case 'recipe':
         require_once 'controllers/RecipeController.php';
         $recipeController = new RecipeController($link);
-
         // Appeler la méthode appropriée en fonction des paramètres
         if ($type) {
             $recipeController->showRecipesByType($type);
@@ -41,10 +39,16 @@ switch ($controller) {
         }
         break;
 
+    case 'user': // Ajout de la case user
+        require_once __DIR__ . '/../app/controllers/UserController.php';
+        $userController = new UserController($link);
+        if ($action === 'auth') {
+            $userController->showAuth(); // Appelle la méthode pour afficher auth.php
+        }
+        break;
+
     default:
         // Page par défaut ou 404 si le contrôleur n'existe pas
         echo "Page non trouvée.";
         break;
 }
-?>
-
